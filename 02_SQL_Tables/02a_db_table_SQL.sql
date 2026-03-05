@@ -1,3 +1,5 @@
+\! cls
+
 /* ------  Strukturen ----- */
 
 /* Kommentar 1 */
@@ -8,7 +10,7 @@
 SHOW DATABASES;
 
 /* DB boo löschen, falls vorhanden*/
-DROP
+DROP DATABASE IF EXISTS boo;
 
 /* DB boo anlegen, falls noch nicht vorhanden*/
 CREATE DATABASE IF NOT EXISTS boo;
@@ -17,10 +19,9 @@ CREATE DATABASE IF NOT EXISTS boo;
 USE boo;
 
 /* Tabelle anlegen */
-CREATE TABLE IF NOT EXISTS test 
+CREATE TABLE IF NOT EXISTS test
 (
-   
-    name VARCHAR(50) ,
+    name VARCHAR(20),
     age INT
 );
 
@@ -28,13 +29,12 @@ CREATE TABLE IF NOT EXISTS test
 SHOW TABLES;
 
 /* Struktur der Tabelle anzeigen */
-DISCRIBE test;  
+DESCRIBE test;
 
 /* ----- Daten ------- */
-    --INSTERT INTO test (name, age) VALUES ('Max', 30);
-    --INSERT INTO test (name, age) VALUES ('Lisa', 25); 
-    --INSERT INTO test VALUES ();  -- Fehlermeldung, da beide Spalten einen Wert benötigen    
-
+INSERT INTO test(name,age) VALUES("Max",35);
+INSERT INTO test(age,name) VALUES(29,"Maxine");
+INSERT INTO test VALUES();
 
 /* ---- Inhalte der Tabelle anzeigen ---- */
-    -- SELECT * FROM test;
+SELECT * FROM test;
