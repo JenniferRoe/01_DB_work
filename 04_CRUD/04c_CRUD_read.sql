@@ -1,66 +1,56 @@
-\! cls
+-- \! cls
 
-SELECT * FROM boo.customers;
+-- SELECT * FROM boo.customers;
 
-
--- SELECT 
+-- SELECT
 --     name,
 --     mail,
 --     wohnort
 -- FROM boo.customers;
 
-# Begrenzen durch LIMIT
-/*
-SELECT 
-    name,
-    mail,
-    wohnort
-FROM boo.customers
--- LIMIT 10
-LIMIT 10,20
-;
-*/
+-- # Begrenzen durch LIMIT
+-- SELECT
+--     telefon,
+--     adresse,
+--     name
+-- FROM boo.customers
+-- LIMIT 5;
 
-# Sortieren , numerisch
-/*
-SELECT 
-    name AS Kundennamen,
-    age AS 'Alter'
-FROM boo.customers
--- ORDER BY age ASC
-ORDER BY age DESC
-LIMIT 20
-;
-*/
-
-# Sortieren , alphnumerisch / kombi
-/*
-SELECT 
-    name AS Kundennamen,
-    age AS 'Alter',
-    wohnort
-FROM boo.customers
-ORDER BY wohnort ASC, age DESC
--- ORDER BY age DESC
--- LIMIT 20
-;
-*/
-
-# Filtern mit WHERE
--- SELECT 
---     name AS Kundennamen,
---     age AS 'Alter',
+-- SELECT
+--     name,
+--     mail,
 --     wohnort
 -- FROM boo.customers
--- WHERE wohnort = "Berlin"
--- -- ORDER BY wohnort ASC, age DESC
--- ORDER BY age DESC
--- LIMIT 20
--- ;
+-- LIMIT 2, 11;
 
-SELECT 
-    count((id))
-    -- name AS Kundennamen
-FROM boo.customers
-LIMIT SELECT count(id) FROM boo.customers - 20 , 
-;
+-- # Sortieren , numerisch
+-- SELECT
+--     name AS Kundennamen,
+--     age AS `Alter der Kunden`
+-- FROM boo.customers
+-- ORDER BY age DESC
+-- LIMIT 7;
+
+-- # Sortieren , alphanumerisch / kombi
+-- SELECT
+--     name AS Kundennamen,
+--     age AS `Alter der Kunden`,
+--     wohnort
+-- FROM boo.customers
+-- ORDER BY wohnort ASC, age DESC
+-- LIMIT 4,8;
+
+-- # Filtern mit WHERE
+-- SELECT
+--     name AS Kundennamen,
+--     age AS `Wie jung sind Sie?`,
+--     wohnort
+-- FROM boo.customers
+-- WHERE wohnort = 'Stuttgart'
+-- ORDER BY age DESC
+-- LIMIT 7;
+
+-- SELECT
+--     count((id))
+-- FROM boo.customers;
+
